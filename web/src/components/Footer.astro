@@ -1,0 +1,29 @@
+---
+---
+<footer class="site-footer">
+  <hr class="rule wrap" />
+  <div class="wrap row">
+    <p class="serif line">Judgment held to the evidence, and returned to the people who must decide.</p>
+    <div class="meta">
+      <span class="muted">© Stance &amp; Signal</span>
+      <a class="link-line" href="/stance-signal-site/real-estate/">Real Estate →</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { padding: clamp(60px, 10vh, 100px) 0 clamp(40px, 6vh, 60px); }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-top: clamp(40px, 7vh, 70px);
+  }
+  .line { max-width: 30ch; font-size: clamp(18px, 2.2vw, 24px); color: var(--paper); }
+  .meta { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; font-size: 12px; }
+  @media (max-width: 640px) {
+    .row { flex-direction: column; align-items: flex-start; gap: 24px; }
+    .meta { align-items: flex-start; }
+  }
+</style>

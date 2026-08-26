@@ -1,0 +1,28 @@
+---
+interface Props {
+  text: string;
+  position?: 'bottom-right' | 'bottom-left';
+}
+const { text, position = 'bottom-right' } = Astro.props;
+---
+<div class={`field-note ${position}`}>
+  <span>{text}</span>
+</div>
+
+<style>
+  .field-note {
+    position: absolute;
+    z-index: 6;
+    bottom: 26px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(242, 239, 230, 0.55);
+  }
+  .bottom-right { right: var(--gutter); text-align: right; }
+  .bottom-left { left: var(--gutter); }
+  @media (max-width: 640px) {
+    .field-note { font-size: 9px; bottom: 18px; }
+  }
+</style>

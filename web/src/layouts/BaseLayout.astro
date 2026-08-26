@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+import '../styles/typography.css';
+import '../styles/motion.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <Navigation />
+  <slot />
+  <Footer />
+  <script>
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        }
+      },
+      { threshold: 0.18 }
+    );
+    document.querySelectorAll('.reveal, .figure-reveal').forEach((el) => io.observe(el));
+
+    const slow = Array.from(document.querySelectorAll<HTMLElement>('.parallax-slow'));
+    if (slow.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const vh = window.innerHeight;
+          for (const el of slow) {
+            const rect = el.getBoundingClientRect();
+            const progress = (rect.top) / vh;
+            const shift = Math.max(-24, Math.min(24, progress * -18));
+            el.style.transform = `translateY(${shift}px)`;
+          }
+          ticking = false;
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  </script>
+</body>
+</html>

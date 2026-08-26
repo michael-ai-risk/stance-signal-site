@@ -1,0 +1,29 @@
+/* Small, deliberate motion only — no decorative animation. */
+
+.figure-reveal img,
+.figure-reveal .frame-fill {
+  opacity: 0;
+  filter: saturate(0.92);
+  transform: scale(1.015);
+  transition: opacity 1400ms cubic-bezier(.16,.7,.2,1), transform 1800ms cubic-bezier(.16,.7,.2,1);
+}
+.figure-reveal.is-visible img,
+.figure-reveal.is-visible .frame-fill {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.parallax-slow {
+  will-change: transform;
+  transition: transform 60ms linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure-reveal img,
+  .figure-reveal .frame-fill {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .parallax-slow { transform: none !important; }
+}
