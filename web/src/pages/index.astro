@@ -2,30 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HumanHero from '../components/HumanHero.astro';
 import EditorialPause from '../components/EditorialPause.astro';
-import CaseFragment from '../components/CaseFragment.astro';
 ---
 <BaseLayout
   title="Stance & Signal — Judgment for decisions in motion"
   description="An independent judgment practice for decisions that keep changing. Real estate is where we operate first."
 >
   <HumanHero
-    eyebrow="A judgment practice — not software"
     title="Judgment for decisions in motion."
-    lede="We examine. We challenge. We take a position — starting with real estate, where the conditions change fastest."
+    lede="We examine. We challenge. We take a position."
     alt="A figure crosses a shaft of light in an otherwise dark space"
-    note="Field / dusk"
   />
 
   <EditorialPause
-    alt="A figure moves behind frosted glass panels, indistinct and in transit"
-    statement="We don't promise certainty. We earn our stance."
-  />
-
-  <CaseFragment
-    eyebrow="Case in progress"
-    title="Mixed-use development feasibility challenge"
-    body="Land assumptions inconsistent. Construction cost underestimated. The exit scenario is highly sensitive, and financing is not yet secured."
-    href="/stance-signal-site/cases/"
-    alt="A blurred figure carried through an urban corridor, motion dragging the frame"
+    label="The system (not software)"
+    steps={["evidence & case", "diagnosis", "specialist capabilities", "research + models", "challenge", "human judgment"]}
   />
 </BaseLayout>
