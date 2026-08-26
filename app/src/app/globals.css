@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --warm-white: #f4f0e8;
+  --ink: #17160f;
+  --near-black: #111110;
+  --line: rgba(23, 22, 15, 0.14);
+  --line-on-dark: rgba(244, 240, 232, 0.18);
+
+  --font-serif: var(--font-serif-en);
+  --font-sans: var(--font-sans-en);
+  --font-hand: var(--font-hand-en);
+}
+
+[data-locale="zh-Hant"] {
+  --font-serif: "Noto Serif TC", serif;
+  --font-sans: "Noto Sans TC", sans-serif;
+  --font-hand: "Ma Shan Zheng", cursive;
+}
+
+@theme inline {
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-hand: var(--font-hand);
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  background: var(--warm-white);
+  color: var(--ink);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
