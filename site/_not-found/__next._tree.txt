@@ -1,3 +1,3 @@
-:HL["/stance-signal-site/_next/static/css/68553ed57aa7f558.css","style"]
+:HL["/stance-signal-site/_next/static/css/015cd40165ab98c0.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@400;500&family=Ma+Shan+Zheng&display=swap","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"awk2sEx1nsCI0FhlvFVdQ"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"mQrSzMeuyQaWUm_Pyshlb"}
